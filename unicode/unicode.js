@@ -2334,7 +2334,8 @@ const small = {
 };
 const fs = require("fs");
 const chars = JSON.parse((fs.readFileSync("unicode/UnicodeData.json")).toString())
-//const chars = data;
+//charset format:
+// { <char>: ["id#", "name"] }
 console.log(Object.keys(data).length,Object.keys(chars).length)
 module.exports = {
 	chars,
