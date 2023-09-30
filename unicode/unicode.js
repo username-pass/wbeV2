@@ -2333,12 +2333,20 @@ const small = {
   z: ["0122", "LATIN SMALL LETTER Z"],
 };
 const fs = require("fs");
-const chars = JSON.parse((fs.readFileSync("unicode/UnicodeData.json")).toString())
+function parseUnicodeDataFile(filePath) {
+    const fileContent = fs.readFileSync(filePath, 'utf-8');
+    return JSON.parse(fileContent);
+}
+
+const chars_30k = parseUnicodeDataFile("unicode/UnicodeData_30k.json");
+const chars_60k = parseUnicodeDataFile("unicode/UnicodeData_60k.json");
 //charset format:
 // { <char>: ["id#", "name"] }
-console.log(Object.keys(data).length,Object.keys(chars).length)
+console.log(Object.keys(chars_30k).length,Object.keys(chars_60k).length)
 module.exports = {
-	chars,
+	chars_30k,
+	chars_60k,
+	chars: chars_60k,
   chars_old: data,
   small,
 };
