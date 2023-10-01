@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const fs = require("fs");
 const path = require("path");
-const {encode, decode} = require("./lib/tbf.js");
+const {encode, decode} = require("./lib/wbe.js");
 
 app.use(express.static(path.join(__dirname,"public")));
 
