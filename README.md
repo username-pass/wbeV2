@@ -15,7 +15,7 @@ Example output:
 
 ## How do I use it?
 
-I am working on a web interface, but in the meantime, use the `encode` and `decode` functions in `lib/tbf.js`.
+I am working on a web interface, but in the meantime, use the `encode` and `decode` functions in `lib/wbe.js`.
 
 ## How can I add my own character set?
 
